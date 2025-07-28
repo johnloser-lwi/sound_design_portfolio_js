@@ -4,7 +4,7 @@ header.innerHTML = `
         <a class="header-links__title link" href="./index.html">Weiqin Yang Sound</a>
         <nav class="header-links__nav">
             <ul>
-                <li><a href="#" class="link">Projects</a></li>
+                <li><a href="./projects.html" class="link">Projects</a></li>
                 <li><a href="#" class="link">More</a></li>
             </ul>
         </nav>

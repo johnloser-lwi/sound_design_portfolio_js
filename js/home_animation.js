@@ -66,8 +66,14 @@ const setupParallaxJs = () => {
     parallaxInstance.friction(0.5, 0.5);
 }
 
-$(() => {
-    setupBgVideo();
-    setupParallaxScroll();
-    setupParallaxJs();
-})
+
+
+const setupHomeAnimation = () => {
+    $(() => {
+        setupBgVideo();
+        setupParallaxScroll();
+        setupParallaxJs();
+    });
+}
+
+setupHomeAnimation();

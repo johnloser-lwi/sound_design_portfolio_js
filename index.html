@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
 
-    <!-- add jquery -->
+   <!-- add jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- add parallaxus -->
@@ -25,12 +25,31 @@
     <!-- add parallax.js for the moving parallax hero section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
+    <!-- add barba.js for ajax -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <!-- add gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
     <!-- header and footer components are shared across pages, use defer to load it after the html is loaded-->
-    <script src="./js/header_footer.js" defer></script>
+    <!-- <script src="./js/header_footer.js" defer></script> -->
     <script src="./js/home_animation.js" defer></script>
+    <script src="./js/barba.js" defer></script>
+    
 </head>
-<body>
-    <main>
+<body data-barba="wrapper">
+    <header class="grid">
+        <div class="header-links">
+            <a class="header-links__title link" href="./index.html">Weiqin Yang Sound</a>
+            <nav class="header-links__nav">
+                <ul>
+                    <li><a href="./projects.html" class="link">Projects</a></li>
+                    <li><a href="#" class="link">More</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main data-barba="container" data-barba-namespace="home">
         <section class="hero main-section">
             <div class="hero-parallax">
                 <div class="hero-parallax__layer1">
@@ -58,5 +77,15 @@
             </div>
         </section>
     </main>
+    <footer class="grid">    
+        <div class="footer-socials">
+            <ul>
+                <li><a href="#"><img src="./assets/images/brands-github.svg" alt="Github"></a></li>
+                <li><a href="#"><img src="./assets/images/brands-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="#"><img src="./assets/images/brands-linkedin.svg" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">&copy;2025 Weiqin Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>
