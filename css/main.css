@@ -1,7 +1,7 @@
 :root {
     --font-color: white;
     --background-color: black;
-    --accent-color: lightgray;
+    --accent-color: rgb(255, 215, 84);
     --section-gap: 10rem;
     --h1-font-size: 4rem;
     --h2-font-size: 3rem;
@@ -69,11 +69,11 @@ header {
     padding: 1rem 2rem;
     text-align: center;
     border-radius: var(--border-radius);
-    transition: transform var(--transition);
+    transition: background-color var(--transition);
 }
 
 .button:hover {
-    transform: scale(1.05);
+    background-color: var(--accent-color);
 }
 
 /* LINK */
