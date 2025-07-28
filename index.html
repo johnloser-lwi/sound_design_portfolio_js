@@ -25,16 +25,18 @@
     <!-- add parallax.js for the moving parallax hero section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-    <!-- header component that's shared across pages, use defer to load it after the html is loaded-->
-    <script src="./js/header.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <!-- header and footer components are shared across pages, use defer to load it after the html is loaded-->
+    <script src="./js/header_footer.js" defer></script>
+    <script src="./js/home_animation.js" defer></script>
 </head>
 <body>
     <main>
         <section class="hero main-section">
             <div class="hero-parallax">
                 <div class="hero-parallax__layer1">
-                    <h class="hero-parallax__title">Weiqin Yang Sound</h>
+                    <div class="hero-parallax__title-wrap">
+                        <h class="hero-parallax__title">Weiqin Yang Sound</h>
+                    </div>
                 </div>
                 <div class="hero-parallax__layer2 jquery-background-video-wrapper">
                     <video class="hero-parallax__video jquery-background-video" loop autoplay muted playsinline poster="./assets/images/hero_cover.png">
@@ -42,17 +44,19 @@
                     </video>
                 </div>
             </div>
+            <div class="hero-link__about-me__wraper">
+                <a href="#about-me" class="hero-link__about-me"></a>
+            </div>
         </section>
         <section class="bio main-section grid">
-            <h2 class="bio-title">About Me</h2>
+            <h2 class="bio-title" id="about-me">About Me</h2>
             <img src="./assets/images/weiqin_yang.png" alt="Weiqin Yang">
             <div class="bio-info">
-                <h2 class="bio-info__title">Sound Designer & Technical Sound Designer</h2>
+                <h2 class="bio-info__title">Sound Designer & <br>Technical Sound Designer</h2>
                 <p class="bio-info__text">My name is Weiqin Yang, a sound designer and technical sound designer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.</p>
                 <a class="button bio-info__button" href="#">Learn More</a>
             </div>
         </section>
     </main>
-    <footer></footer>
 </body>
 </html>

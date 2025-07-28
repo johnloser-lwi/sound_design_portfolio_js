@@ -10,7 +10,7 @@ main {
     height: 90vh;
     top: 0;
     left: 0;
-    z-index: -100;
+    position: relative;
 }
 
 .hero-parallax {
@@ -18,6 +18,7 @@ main {
     top: -10%;
     height: 100vh;
     overflow: hidden;
+    z-index: -100;
 }
 
 .hero-parallax__layer1 {
@@ -26,6 +27,11 @@ main {
     height: 100%;
     text-align: center;
     z-index: 100;
+}
+
+.hero-parallax__title-wrap {
+    width: 100%;
+    height: 100%;
 }
 
 .hero-parallax__title {
@@ -44,36 +50,95 @@ main {
     background-image: linear-gradient(to bottom, green, white);
 }
 
+.hero-link__about-me__wraper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.hero-link__about-me {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    bottom: 0;
+    animation: flash 0.5s ease-in-out infinite alternate;
+    z-index: 9999;
+}
+
+.hero-link__about-me:hover {
+    animation: none;
+}
+
+.hero-link__about-me:before {
+    position: absolute;
+    content: "";
+    width: 10rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: var(--font-color);
+    transform-origin: 0 0;
+    transform: rotate(45deg) translateX(-100%);
+    left: 57%;
+    bottom: 0;
+}
+
+
+
+.hero-link__about-me:after {
+    position: absolute;
+    content: "";
+    width: 10rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: var(--font-color);
+    transform-origin: 0 0;
+    transform: rotate(315deg) translateX(0);
+    left: 43%;
+    bottom: 0;
+}
+
 /* BIO SECTION */
 .bio {
-    height: 100vh;
+    height: max-content;
     align-items: center;
     grid-template-rows: 4rem auto;
-    padding: 2rem 0;
+    padding: 5rem 0;
     box-sizing: border-box;
 }
 
 .bio-title {
     grid-row: 1;
-    grid-column: 2 / -1;
+    grid-column: 3 / -3;
     font-size: var(--h1-font-size);
 }
 
 .bio img {
     width: 100%;
     grid-column: 3 / 3 span;
+    position: relative;
+    top: -5%;
+    border-radius: var(--border-radius);
 }
 
 .bio-info {
-    width: 100%;
-    grid-column: 7 / 11;
+    grid-column: 7 / -3;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
 }
 
 .bio-info__title {
     font-size: var(--h2-font-size);
+}
+
+.bio-info__text {
+    line-height: 1.2rem;
 }
 
 .bio-info__button {
