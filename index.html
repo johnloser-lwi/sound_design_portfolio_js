@@ -7,25 +7,31 @@
 
     <!-- fonts -->
     <link rel="stylesheet" href="./css/font.css">
-
+    <!-- stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/bg-video/jquery.background-video.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <!-- add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- add parallaxus -->
+    <script src="./js/parallaxus/parallaxus.js"></script>
+
+    <!-- add bg video -->
+    <script src="./js/bg-video/jquery.background-video.js"></script>
+
+    <!-- add parallax.js for the moving parallax hero section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <!-- header component that's shared across pages, use defer to load it after the html is loaded-->
+    <script src="./js/header.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-links">
-            <a class="header-links__title" href="./index.html">Weiqin Yang Sound</a>
-            <nav class="header-links__nav">
-                <ul>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">More</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <main>
-        <section class="hero">
+        <section class="hero main-section">
             <div class="hero-parallax">
                 <div class="hero-parallax__layer1">
                     <h class="hero-parallax__title">Weiqin Yang Sound</h>
@@ -36,23 +42,17 @@
                     </video>
                 </div>
             </div>
-
+        </section>
+        <section class="bio main-section grid">
+            <h2 class="bio-title">About Me</h2>
+            <img src="./assets/images/weiqin_yang.png" alt="Weiqin Yang">
+            <div class="bio-info">
+                <h2 class="bio-info__title">Sound Designer & Technical Sound Designer</h2>
+                <p class="bio-info__text">My name is Weiqin Yang, a sound designer and technical sound designer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.</p>
+                <a class="button bio-info__button" href="#">Learn More</a>
+            </div>
         </section>
     </main>
     <footer></footer>
-
-    <!-- add jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- add parallaxus -->
-    <script src="./js/parallaxus/parallaxus.js"></script>
-
-    <!-- add bg video -->
-     <script src="./js/bg-video/jquery.background-video.js"></script>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-
-
-    <script src="./js/main.js"></script>
 </body>
 </html>

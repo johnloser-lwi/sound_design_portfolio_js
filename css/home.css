@@ -1,0 +1,81 @@
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.hero-parallax {
+    position: relative;
+    top: -10%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-parallax__layer1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.hero-parallax__title {
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Permanent Marker';
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-parallax__layer2 {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, green, white);
+}
+
+/* BIO SECTION */
+.bio {
+    height: 100vh;
+    align-items: center;
+    grid-template-rows: 4rem auto;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.bio-title {
+    grid-row: 1;
+    grid-column: 2 / -1;
+    font-size: var(--h1-font-size);
+}
+
+.bio img {
+    width: 100%;
+    grid-column: 3 / 3 span;
+}
+
+.bio-info {
+    width: 100%;
+    grid-column: 7 / 11;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-info__title {
+    font-size: var(--h2-font-size);
+}
+
+.bio-info__button {
+    align-self: flex-start;
+}

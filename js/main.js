@@ -1,8 +1,16 @@
 
 
 const setupParallaxScroll = () => {
-    $(".hero-parallax__layer2").attr('data-parallaxus-transform', '{"0": {"scale": 1}, "80": {"scale": 0.95}, "100": {"scale": 0.9}}');
-    $(".hero-parallax__layer2").attr('data-parallax', 'scroll');
+    $("main").attr('data-parallaxus-easing');
+    $(".main-section").attr('data-parallaxus-transform',
+        `{
+            "0": {"opacity": 1, "translateY": "0%"},
+            "50": {"opacity": 1, "translateY": "20%"},
+            "60": {"opacity": 0.5, "translateY": "40%"},
+            "100": {"opacity": 0, "translateY": "0%"}
+        }`);
+
+    parallaxusSetup();
 }
 
 const setupBgVideo = () => {
