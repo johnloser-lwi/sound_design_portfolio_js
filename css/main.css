@@ -20,6 +20,7 @@ body {
     position: relative;
     color: var(--font-color);
     font-family: Poppins Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 a {

@@ -31,16 +31,14 @@
     <!-- add gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <!-- header and footer components are shared across pages, use defer to load it after the html is loaded-->
-    <!-- <script src="./js/header_footer.js" defer></script> -->
+    <script src="./js/helper.js"></script>
     <script src="./js/home_animation.js" defer></script>
     <script src="./js/barba.js" defer></script>
-    
 </head>
 <body data-barba="wrapper">
     <header class="grid">
         <div class="header-links">
-            <a class="header-links__title link" href="./index.html">Weiqin Yang Sound</a>
+            <a class="header-links__title" href="/">Weiqin Yang Sound</a>
             <nav class="header-links__nav">
                 <ul>
                     <li><a href="./projects.html" class="link">Projects</a></li>
@@ -49,7 +47,7 @@
             </nav>
         </div>
     </header>
-    <main data-barba="container" data-barba-namespace="home">
+    <main data-barba="container" data-barba-namespace="home" >
         <section class="hero main-section">
             <div class="hero-parallax">
                 <div class="hero-parallax__layer1">
@@ -64,7 +62,7 @@
                 </div>
             </div>
             <div class="hero-link__about-me__wraper">
-                <a href="#about-me" class="hero-link__about-me"></a>
+                <a href="#" class="hero-link__about-me prevent-barba" ></a>
             </div>
         </section>
         <section class="bio main-section grid">
@@ -73,11 +71,11 @@
             <div class="bio-info">
                 <h2 class="bio-info__title">Sound Designer & <br>Technical Sound Designer</h2>
                 <p class="bio-info__text">My name is Weiqin Yang, a sound designer and technical sound designer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.</p>
-                <a class="button bio-info__button" href="#">Learn More</a>
+                <a class="button bio-info__button" href="./projects.html">Learn More</a>
             </div>
         </section>
     </main>
-    <footer class="grid">    
+    <footer class="grid">
         <div class="footer-socials">
             <ul>
                 <li><a href="#"><img src="./assets/images/brands-github.svg" alt="Github"></a></li>

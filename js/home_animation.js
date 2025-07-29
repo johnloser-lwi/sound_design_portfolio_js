@@ -27,20 +27,20 @@ const setupParallaxScroll = () => {
     $(".bio-info__title, .bio-info__text").attr('data-parallaxus-transform',
         `{
             "0": {"translateX": "100%", "opacity":0},
-            "40": {"translateX": "0%", "opacity":1},
+            "20": {"translateX": "0%", "opacity":1},
             "100": {"translateX": "0%", "opacity":1}
         }`);
 
     $(".bio-info__button").attr('data-parallaxus-transform',
         `{
             "0": {"translateX": "600%", "opacity":0},
-            "40": {"translateX": "0%", "opacity":1},
+            "20": {"translateX": "0%", "opacity":1},
             "100": {"translateX": "0%", "opacity":1}
         }`);
     $(".bio img, .bio-title").attr('data-parallaxus-transform',
         `{
             "0": {"translateX": "-50%", "opacity":0},
-            "50": {"translateX": "0%", "opacity":1},
+            "20": {"translateX": "0%", "opacity":1},
             "80": {"translateX": "0%", "opacity":1},
             "100": {"translateX": "0%", "opacity":1}
         }`);
@@ -52,8 +52,11 @@ const setupBgVideo = () => {
     $(".hero-parallax__video").bgVideo({
         showPausePlay: false,
         pauseAfter: 0,
-        fadeIn: 0,
+        fadeIn: 500,
     });
+
+    const video = document.querySelector('.jquery-background-video');
+    video.play();
 }
 
 const setupParallaxJs = () => {
@@ -66,13 +69,19 @@ const setupParallaxJs = () => {
     parallaxInstance.friction(0.5, 0.5);
 }
 
-
+const setupAboutMeButton = () => {
+    $(".hero-link__about-me").click(e => {
+        e.preventDefault();
+        document.querySelector("#about-me").scrollIntoView({behavior: "smooth"});
+    });
+}
 
 const setupHomeAnimation = () => {
     $(() => {
         setupBgVideo();
         setupParallaxScroll();
         setupParallaxJs();
+        setupAboutMeButton();
     });
 }
 
