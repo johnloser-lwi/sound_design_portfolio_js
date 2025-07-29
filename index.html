@@ -16,7 +16,7 @@
    <!-- add jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- add parallaxus -->
+    <!-- add parallaxus for page scroll effects -->
     <script src="./js/parallaxus/parallaxus.js"></script>
 
     <!-- add bg video -->
@@ -25,17 +25,19 @@
     <!-- add parallax.js for the moving parallax hero section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-    <!-- add barba.js for ajax -->
+    <!-- add barba.js for page transition -->
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
-    <!-- add gsap -->
+    <!-- add gsap for transition animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
+    <!-- custom scripts -->
     <script src="./js/helper.js"></script>
     <script src="./js/video-info.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/projects.js"></script>
 
+    <!-- entry script that initialize the site -->
     <script src="./js/index.js" defer></script>
 </head>
 <body data-barba="wrapper">
@@ -58,6 +60,7 @@
                         <h class="hero-parallax__title">Weiqin Yang Sound</h>
                     </div>
                 </div>
+                <!-- a setup for bgVideo -->
                 <div class="hero-parallax__layer2 jquery-background-video-wrapper">
                     <video class="hero-parallax__video jquery-background-video" loop autoplay muted playsinline poster="./assets/images/hero_cover.png">
                         <source src="./assets/video/hero.mp4" type="video/mp4">

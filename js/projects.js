@@ -1,8 +1,14 @@
+
+// generate projects
 const loadProjects = () => {
     const container = document.querySelector(".project-container");
+
+    // if there isn't a container with class ".project-container" stop the execution
     if (!container)  return;
 
+    // get the video list defined in video-info.js
     videoList().forEach(video => {
+        // create container for each youtube video
         const frame = document.createElement("div");
         frame.className = "project-container__frame";
         frame.innerHTML = `
@@ -11,6 +17,7 @@ const loadProjects = () => {
             <p class="project-container__video-description">${video.description}</p>
         `;
 
+        // add the video to the container
         container.append(frame);
     });
 }

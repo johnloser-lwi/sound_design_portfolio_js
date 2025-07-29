@@ -1,5 +1,7 @@
 
-
+// use parallaxus for scroll effect
+// add a data-parallaxus-transform to enable the plugin on the element
+// use a json string to describe the setps of animation
 const setupParallaxScroll = () => {
     // hero section
     $(".hero").attr('data-parallaxus-transform',
@@ -48,6 +50,7 @@ const setupParallaxScroll = () => {
     parallaxusSetup();
 }
 
+// setup bgVideo for hero section
 const setupBgVideo = () => {
     $(".hero-parallax__video").bgVideo({
         showPausePlay: false,
@@ -55,20 +58,25 @@ const setupBgVideo = () => {
         fadeIn: 500,
     });
 
+    // manually play the video since there are some problem with barba transition
     const video = document.querySelector('.jquery-background-video');
     video.play();
 }
 
+// for the here title parallax effect
 const setupParallaxJs = () => {
+    // data-depth defines how much the title follows the mouse
     $(".hero-parallax__layer1").attr("data-depth", "0.2");
 
     let parallaxInstance = new Parallax(document.querySelector(".hero-parallax"), {
         hoverOnly: true,
     });
 
+    // friction change the behavior of tween
     parallaxInstance.friction(0.5, 0.5);
 }
 
+// the about me button need to bypass the barba and scroll to about me section
 const setupAboutMeButton = () => {
     $(".hero-link__about-me").click(e => {
         e.preventDefault();
@@ -76,6 +84,7 @@ const setupAboutMeButton = () => {
     });
 }
 
+// setup script for home page
 const setupHomeAnimation = () => {
     $(() => {
         setupBgVideo();

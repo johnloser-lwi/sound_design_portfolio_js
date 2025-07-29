@@ -1,3 +1,7 @@
+
+/* 
+manually load page related css since barba doesn't unload the head
+*/
 const loadCSS = (css) => {
     $("<link>", {
         rel: "stylesheet",
@@ -6,6 +10,9 @@ const loadCSS = (css) => {
     }).appendTo("head");
 }
 
+/* 
+manually unload page related css since barba doesn't unload the head
+*/
 const removeCSS = (css) => {
     $(`link[href='./css/${css}.css']`).remove();
 }

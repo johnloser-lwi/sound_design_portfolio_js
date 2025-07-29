@@ -1,3 +1,5 @@
+
+// a list of youtube videos with id, title, description
 const videoList = () =>
 [
     {
