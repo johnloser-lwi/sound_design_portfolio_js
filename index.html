@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
 
-   <!-- add jquery -->
+    <!-- add jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- add parallaxus for page scroll effects -->
@@ -31,13 +31,15 @@
     <!-- add gsap for transition animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <!-- custom scripts -->
+    <!-- custom scripts, these doesn't need defer attribute since they only contains functions -->
     <script src="./js/helper.js"></script>
     <script src="./js/video-info.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/projects.js"></script>
 
     <!-- entry script that initialize the site -->
+    <!-- this script need defer to execute after page load -->
+    <!-- it will execute some of the functions defined in the previous scripts -->
     <script src="./js/index.js" defer></script>
 </head>
 <body data-barba="wrapper">
