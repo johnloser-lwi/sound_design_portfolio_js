@@ -94,10 +94,13 @@ header {
                 background-color var(--transition);
 }
 
-.link:hover::before {
+.link-current {
+    cursor: default;
+}
+
+.link:hover::before, .link-current::before {
     background-color: var(--font-color);
     width: 110%;
-    
 }
 
 /* FOOTER */
