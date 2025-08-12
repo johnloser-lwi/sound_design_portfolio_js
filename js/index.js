@@ -19,6 +19,9 @@ barba.init({
 
                 // hide previous screen so it doesn't take up space and causing problems in animation
                 current.container.style.display = "none";
+
+                // Prevent footer flashing during transition
+                document.querySelector("footer").style.display = "none";
             },
             enter(data) {
                 // set a bit delay to deal with the css delay. It can avoid some weird flashing due to css unload and load.
@@ -27,6 +30,9 @@ barba.init({
             afterEnter() {
                 // setup custom click events for buttons after the new page loads
                 setupButtons();
+
+                // Prevent footer flashing during transition
+                document.querySelector("footer").style.display = "unset";
             },
         },
         {
@@ -56,13 +62,13 @@ barba.init({
                 removeCSS("home");
             }
         },
-        // pretty much the samething here
+        // pretty much the same thing here
         {
             namespace: "projects",
             beforeEnter() {
                 loadCSS("projects");
-                // generate project html
-                loadProjects();
+                // setup project page
+                setupProjectPage();
             },
             afterLeave() {
                 removeCSS("projects");
@@ -73,3 +79,4 @@ barba.init({
 
 setupButtons();
 setupHomeAnimation();
+gsap.registerPlugin(ScrollTrigger) ;

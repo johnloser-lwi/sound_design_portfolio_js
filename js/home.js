@@ -2,7 +2,7 @@
 // use parallaxus for scroll effect
 // add a data-parallaxus-transform to enable the plugin on the element
 // use a json string to describe the setps of animation
-const setupParallaxScroll = () => {
+const setupHomeParallaxScroll = () => {
     // hero section
     $(".hero").attr('data-parallaxus-transform',
         `{
@@ -88,7 +88,7 @@ const setupAboutMeButton = () => {
 const setupHomeAnimation = () => {
     $(() => {
         setupBgVideo();
-        setupParallaxScroll();
+        setupHomeParallaxScroll();
         setupParallaxJs();
         setupAboutMeButton();
     });
