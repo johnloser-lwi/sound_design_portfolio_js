@@ -6,7 +6,7 @@
     --h1-font-size: 4rem;
     --h2-font-size: 3rem;
     --bold: 600;
-    --border-radius: 5px;
+    --border-radius: 15px;
     --transition: 0.1s ease-in;
 }
 
@@ -21,6 +21,13 @@ body {
     color: var(--font-color);
     font-family: Poppins Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+}
+
+.page-title {
+    grid-column: 3 / 11;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0;
 }
 
 a {
@@ -38,6 +45,9 @@ header {
     height: 10vh;
     display: flex;
     align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header-links {
@@ -46,12 +56,17 @@ header {
     width: 100%;
     justify-content: space-between;
     background-color: black;
+    align-items: center;
 }
 
 .header-links__nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
+}
+
+.header-links__burger {
+    display: none;
 }
 
 /* SECTIONS */
@@ -71,6 +86,7 @@ header {
     text-align: center;
     border-radius: var(--border-radius);
     transition: background-color var(--transition);
+    cursor: pointer;
 }
 
 .button:hover {
@@ -142,5 +158,61 @@ footer {
     }
     to {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 1rem;
+    }
+
+    .page-title {
+        grid-column: 1 / -1;
+    }
+
+    .header-links {
+        grid-column: 1 / -1;
+        position: relative;
+    }
+
+    .header-links__nav {
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .header-links__nav ul {
+        flex-direction: column;
+    }
+
+    .header-links__nav ul a {
+        color: black;
+    }
+
+    .link:hover::before, .link-current::before {
+        background-color: black;
+        width: 110%;
+    }
+
+    .header-links__burger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header-links__burger-img {
+        width: 50%;
     }
 }

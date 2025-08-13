@@ -24,7 +24,7 @@ const loadProjects = () => {
     });
 }
 
-const setupProjectParallaxScroll = () => {
+const setupProjectAnimation = () => {
     gsap.from("h1", {
         y: 100,
         opacity: 0,
@@ -46,6 +46,6 @@ const setupProjectParallaxScroll = () => {
 const setupProjectPage = () => {
     $(() => {
         loadProjects();
-        setupProjectParallaxScroll();
+        setupProjectAnimation();
     })
 }

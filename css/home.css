@@ -110,7 +110,7 @@ main {
     height: 100vh;
     align-items: center;
     grid-template-rows: 4rem auto;
-    padding: 1rem 0;
+    padding-top: 1rem;
     box-sizing: border-box;
 }
 
@@ -146,4 +146,23 @@ main {
 
 .bio-info__button {
     align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .bio-title, .bio-info {
+        grid-column: 1 / -1;
+    }
+
+    .bio {
+        grid-template-rows: 2rem max-content;
+        gap: 4rem;
+    }
+
+    .bio img {
+        display: none;
+    }
+
+    .bio-info {
+        grid-column: 1 / -1;
+    }
 }

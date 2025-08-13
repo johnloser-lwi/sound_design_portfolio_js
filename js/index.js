@@ -73,10 +73,20 @@ barba.init({
             afterLeave() {
                 removeCSS("projects");
             }
+        },
+        {
+            namespace: "contact",
+            beforeEnter() {
+                loadCSS("contact");
+                setupContactPage();
+            },
+            afterLeave() {
+                removeCSS("contact");
+            }
         }
     ]
 });
 
 setupButtons();
 setupHomeAnimation();
-gsap.registerPlugin(ScrollTrigger) ;
+setupWindow();
